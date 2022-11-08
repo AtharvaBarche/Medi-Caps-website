@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<title>User Profile and Login System</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">User Profile and Login System</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		</div>
+
+		<div class="container-fluid, collapse navbar-collapse"
+			id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item"><a class="nav-link active"
+					aria-current="page" th:href="@{/logout}">Logout</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container, upload-container">
+		<div class="upload-header">
+			<h2>Upload Student Details</h2>
+		</div>
+		<div class="upload-content">
+			<div class="single-upload">
+				<h3>Upload the CSV File</h3>
+				<form id="singleUploadForm" name="singleUploadForm">
+					<input id="singleFileUploadInput" type="file" name="file"
+						class="file-input" required />
+					<button type="submit" class="primary submit-btn">Submit</button>
+				</form>
+				<div class="upload-response">
+					<div id="singleFileUploadError"></div>
+					<div id="singleFileUploadSuccess"></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<script src="/js/main.js"></script>
+</body>
+</html>
